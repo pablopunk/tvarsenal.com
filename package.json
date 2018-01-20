@@ -1,0 +1,41 @@
+{
+  "name": "tvarsenal.com",
+  "version": "1.0.0",
+  "description": "Arsenal games",
+  "main": "index.js",
+  "scripts": {
+    "start": "next start",
+    "build": "next build",
+    "dev": "next",
+    "test": "standard --fix"
+  },
+  "now": {
+    "alias": "tvarsenal.com"
+  },
+  "keywords": [
+    "tv",
+    "arsenal",
+    "television",
+    "soccer",
+    "football",
+    "channel",
+    "canal"
+  ],
+  "author": "Pablo Varela",
+  "license": "MIT",
+  "devDependencies": {
+    "next": "^3.0.1-beta.21",
+    "standard": "^10.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablopunk/tvarsenal.com.git"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-fade-in": "^0.1.4",
+    "react-ga": "^2.2.0"
+  }
+}

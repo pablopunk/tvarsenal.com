@@ -5,7 +5,7 @@ import Topbar from './topbar'
 
 export default class extends React.Component {
   componentDidMount () {
-    ReactGA.initialize('UA-106008527-1')
+    ReactGA.initialize('UA-106008527-3')
     ReactGA.pageview(document.location.pathname)
   }
 

@@ -13,7 +13,7 @@ export default class Index extends React.Component {
   }
 
   componentDidMount () {
-    fetch('https://soccer.now.sh/england/arsenal').then(res => {
+    fetch('https://soccer.now.sh/england/arsenal?timezone=Europe/London').then(res => {
       res.json().then(({ matches }) => {
         matches = matches.filter(filterPlayed)
         this.setState({ matches })

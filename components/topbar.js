@@ -1,7 +1,7 @@
 export default () => (
   <div>
     <nav className='top-bar'>
-      <img src='https://file-hyenqwiapj.now.sh/' />
+      <img src='/static/header.svg' />
     </nav>
     <style jsx>{`
       .top-bar {
@@ -12,11 +12,11 @@ export default () => (
         justify-content: center;
         align-items: center;
         background-color: whitesmoke;
-        margin-top: -120px;
+        margin-top: -80px;
         padding: 15px 0;
       }
       .top-bar img {
-        width: 100px;
+        width: 50px;
       }
     `}</style>
   </div>

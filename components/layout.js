@@ -2,10 +2,11 @@ import React from 'react'
 import ReactGA from 'react-ga'
 import Head from 'next/head'
 import Topbar from './topbar'
+const {names, colors} = require('../settings.json')
 
 export default class extends React.Component {
   componentDidMount () {
-    ReactGA.initialize('UA-106008527-3')
+    ReactGA.initialize('UA-106008527-1')
     ReactGA.pageview(document.location.pathname)
   }
 
@@ -21,85 +22,46 @@ export default class extends React.Component {
           <meta http-equiv='X-UA-Compatible' content='ie=edge' />
           <link
             rel='apple-touch-icon'
-            sizes='57x57'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-57x57.png'
-          />
-          <link
-            rel='apple-touch-icon'
-            sizes='60x60'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-60x60.png'
-          />
-          <link
-            rel='apple-touch-icon'
-            sizes='72x72'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-72x72.png'
-          />
-          <link
-            rel='apple-touch-icon'
-            sizes='76x76'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-76x76.png'
-          />
-          <link
-            rel='apple-touch-icon'
-            sizes='114x114'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-114x114.png'
-          />
-          <link
-            rel='apple-touch-icon'
-            sizes='120x120'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-120x120.png'
-          />
-          <link
-            rel='apple-touch-icon'
-            sizes='144x144'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-144x144.png'
-          />
-          <link
-            rel='apple-touch-icon'
-            sizes='152x152'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-152x152.png'
-          />
-          <link
-            rel='apple-touch-icon'
             sizes='180x180'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/apple-icon-180x180.png'
-          />
-          <link
-            rel='icon'
-            type='image/png'
-            sizes='192x192'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/android-icon-192x192.png'
+            href='/static/apple-touch-icon.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='32x32'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/favicon-32x32.png'
-          />
-          <link
-            rel='icon'
-            type='image/png'
-            sizes='96x96'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/favicon-96x96.png'
+            href='/static/favicon-32x32.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='16x16'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/favicon-16x16.png'
+            href='/static/favicon-16x16.png'
           />
           <link
             rel='manifest'
-            href='https://arsenal-faviconico-zmwcbetsrw.now.sh/manifest.json'
+            href='/static/manifest.json'
           />
-          <meta name='msapplication-TileColor' content='#ffffff' />
-          <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
+          <link
+            rel='mask-icon'
+            href='/static/safari-pinned-tab.svg'
+            color={colors.favicon}
+          />
+          <link
+            rel='shortcut icon'
+            href='/static/favicon.ico'
+          />
+          <meta name='apple-mobile-web-app-title' content={names['short-name']} />
+          <meta name='application-name' content={names['short-name']} />
+          <meta
+            name='msapplication-config'
+            content='/static/browserconfig.xml'
+          />
           <meta name='theme-color' content='#ffffff' />
           <link
             href='https://fonts.googleapis.com/css?family=Raleway'
             rel='stylesheet'
           />
-          <title>TV Arsenal</title>
+          <title>{names['long-name']}</title>
         </Head>
         <Topbar />
         <main>
@@ -112,11 +74,11 @@ export default class extends React.Component {
           body {
             margin: 0;
             padding: 0;
-            color: crimson;
+            color: ${colors.main};
             font-family: Raleway, sanserif;
           }
           *::selection {
-            background-color: #79ffe1;
+            background-color: ${colors.selection};
           }
           ul {
             padding: 0;
@@ -125,7 +87,7 @@ export default class extends React.Component {
             z-index: 2;
             position: relative;
             background-color: white;
-            margin-top: 120px;
+            margin-top: 80px;
           }
           .flex-container {
             height: 100%;
@@ -143,13 +105,13 @@ export default class extends React.Component {
             padding: 1em;
           }
           footer a {
-            color: cornflowerblue;
+            color: ${colors.mainDim};
             text-decoration: none;
             font-size: 0.7em;
           }
           footer a:hover {
             text-decoration: underline;
-            color: aquamarine;
+            color: ${colors.selection};
           }
         `}</style>
       </div>

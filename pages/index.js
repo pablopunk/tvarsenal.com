@@ -1,8 +1,10 @@
 import React from 'react'
 import FadeIn from 'react-fade-in'
 import fetch from 'isomorphic-fetch'
+import {DoubleBounce} from 'better-react-spinkit'
 import Layout from '../components/layout'
 import Match from '../components/match'
+const {api} = require('../settings')
 
 const filterPlayed = m => !m.played
 
@@ -13,7 +15,7 @@ export default class Index extends React.Component {
   }
 
   componentDidMount () {
-    fetch('https://soccer.now.sh/england/arsenal?timezone=Europe/London').then(res => {
+    fetch(api.url).then(res => {
       res.json().then(({ matches }) => {
         matches = matches.filter(filterPlayed)
         this.setState({ matches })
@@ -25,7 +27,9 @@ export default class Index extends React.Component {
     if (this.state.matches.length === 0) {
       return (
         <Layout>
-          <div style={{marginTop: '20px'}}>Loading...</div>
+          <div style={{marginTop: '20px'}}>
+            <DoubleBounce size={50} />
+          </div>
         </Layout>
       )
     }

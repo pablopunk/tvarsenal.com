@@ -1,0 +1,18 @@
+{
+  "names": {
+    "short-name": "tvarsenal",
+    "long-name": "TV Arsenal"
+  },
+  "colors": {
+    "main": "crimson",
+    "mainDim": "tomato",
+    "selection": "gold",
+    "favicon": "#4169e1"
+  },
+  "api": {
+    "url": "https://soccer.now.sh/england/arsenal?timezone=Europe/London"
+  },
+  "analytics": {
+    "google-id": "UA-106008527-3"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "tvarsenal.com",
-  "version": "1.0.0",
-  "description": "Arsenal games",
+  "version": "2.0.0",
+  "description": "Arsenal games and schedules",
   "main": "index.js",
   "scripts": {
     "start": "next start",
@@ -15,11 +15,9 @@
   "keywords": [
     "tv",
     "arsenal",
+    "london",
     "television",
-    "soccer",
-    "football",
-    "channel",
-    "canal"
+    "channel"
   ],
   "author": "Pablo Varela",
   "license": "MIT",
@@ -32,6 +30,7 @@
     "url": "git+https://github.com/pablopunk/tvarsenal.com.git"
   },
   "dependencies": {
+    "better-react-spinkit": "^2.0.4",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

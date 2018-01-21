@@ -1,5 +1,8 @@
 # [tvarsenal.com](https://tvarsenal.com)
 
+<p align="center">
+  <img src="https://tvarsenal.com/static/header.svg" width="100px" />
+</p>
 <p align="center"><i>Arsenal games. TVs & Schedules</i></p>
 
 ## Make your own

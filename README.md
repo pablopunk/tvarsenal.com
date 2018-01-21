@@ -1,6 +1,6 @@
 # [tvarsenal.com](https://tvarsenal.com)
 
-<p align="center"><i>Arseanl games. TVs & Schedules</i></p>
+<p align="center"><i>Arsenal games. TVs & Schedules</i></p>
 
 ## Make your own
 

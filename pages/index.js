@@ -9,17 +9,27 @@ const filterPlayed = m => !m.played
 export default class Index extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { matches: props.matches }
+    this.state = { matches: [] }
   }
 
-  static async getInitialProps () {
-    const res = await fetch('https://soccer.now.sh/england/arsenal')
-    let {matches} = await res.json()
-    matches = matches.filter(filterPlayed)
-    return { matches }
+  componentDidMount () {
+    fetch('https://soccer.now.sh/england/arsenal').then(res => {
+      res.json().then(({ matches }) => {
+        matches = matches.filter(filterPlayed)
+        this.setState({ matches })
+      })
+    })
   }
 
   render () {
+    if (this.state.matches.length === 0) {
+      return (
+        <Layout>
+          <div style={{marginTop: '20px'}}>Loading...</div>
+        </Layout>
+      )
+    }
+
     return (
       <Layout>
         <FadeIn>

@@ -1,3 +1,7 @@
 {
-  "alias": "tvarsenal.com"
+  "version": 2,
+  "alias": "tvarsenal.com",
+  "builds": [
+    { "src": "package.json", "use": "@now/next" }
+  ]
 }

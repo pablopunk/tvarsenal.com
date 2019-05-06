@@ -3,6 +3,7 @@
     "short-name": "tvarsenal",
     "long-name": "TV Arsenal"
   },
+  "defaultLeague": "Premier League",
   "colors": {
     "main": "crimson",
     "mainDim": "tomato",
